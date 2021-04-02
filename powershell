@@ -1,0 +1,3 @@
+Invoke-WebRequest -UseBasicParsing -Uri "https://api.thousandeyes.com/v6/users/new.json" -Method 'POST' -BODY $body - Headers $header
+$header = @{"Authorization" = "Bearer (type in your bearer token)";"Content-Type"="application/json"}
+$body = @{"name"="shimei";"email"="scridlig@thousandeyes.com";"loginAccountGroup"=@{"aid"=189588};"allAccountGroupRoles"=@(@{"roleId"=284492})}|CovertTo-Json
